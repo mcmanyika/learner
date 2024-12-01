@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
             Learn Smarter, Manage Better
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Transform your educational institution with our cutting-edge school management system. 
+            Transform your school with our cutting-edge school management system. 
             Streamline operations, enhance learning experiences, and empower your staff.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
