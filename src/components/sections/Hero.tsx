@@ -11,14 +11,6 @@ export function Hero() {
 
       <div className="mx-auto max-w-7xl px-6 pt-32 sm:pt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mb-8 flex justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              <span className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-primary" />
-                Revolutionizing Education Management
-              </span>
-            </div>
-          </div>
           <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-primary to-blue-600">
             Learn Smarter, Manage Better
           </h1>
@@ -30,9 +22,6 @@ export function Hero() {
             <Button size="lg" className="bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 transition-opacity gap-2">
               Start Your Journey
               <ArrowRight className="h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Watch Demo
             </Button>
           </div>
         </div>
