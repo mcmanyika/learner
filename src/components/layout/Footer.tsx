@@ -10,13 +10,11 @@ const navigation = {
   ],
   support: [
     { name: 'Knowledge Base', href: '#' },
-    { name: 'Video Tutorials', href: '#' },
     { name: 'Live Chat', href: '#' },
   ],
   company: [
     { name: 'About Us', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'News', href: '#' },
+    { name: 'School Finder', href: 'https://smartlearner.vercel.app/' },
     { name: 'Partners', href: '#' },
   ],
   legal: [
