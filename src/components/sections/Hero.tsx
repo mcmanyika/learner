@@ -82,7 +82,7 @@ export function Hero() {
                   delay: 0.6,
                   hover: { duration: 0.2 }
                 }}
-                className="relative"
+                className="relative" 
               >
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/glenview2-b3d45.appspot.com/o/general%2Fweb%2Fstudents%2FDSC_8739.jpg?alt=media&token=4c1ad891-71f2-4ba0-8bf0-5ab698df5e95"
