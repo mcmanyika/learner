@@ -7,6 +7,7 @@ import {
   Shield,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -51,27 +52,66 @@ export function Features() {
   return (
     <div id="features" className="py-24 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary uppercase">Powerful Features</h2>
-        </div>
-        <div className="mx-auto  max-w-2xl mt-10 lg:max-w-none">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-2xl lg:text-center"
+        >
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-base font-semibold leading-7 text-primary uppercase"
+          >
+            Powerful Features
+          </motion.h2>
+        </motion.div>
+        <div className="mx-auto max-w-2xl mt-10 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature) => (
-              <div key={feature.name} 
-                className="flex flex-col rounded-2xl border border-gray-100 p-8 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
-                <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
-                  <div className={cn(
-                    "rounded-lg p-2 bg-gradient-to-br",
-                    feature.gradient
-                  )}>
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.name}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2 + index * 0.1,
+                  ease: "easeOut"
+                }}
+                whileHover={{ 
+                  y: -8,
+                  transition: { duration: 0.2 }
+                }}
+                className="flex flex-col rounded-2xl border border-gray-100 p-8 hover:shadow-lg"
+              >
+                <motion.dt 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={cn(
+                      "rounded-lg p-2 bg-gradient-to-br",
+                      feature.gradient
+                    )}
+                  >
                     <feature.icon className="h-5 w-5 text-white" aria-hidden="true" />
-                  </div>
+                  </motion.div>
                   {feature.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                </motion.dt>
+                <motion.dd 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                  className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600"
+                >
                   <p className="flex-auto">{feature.description}</p>
-                </dd>
-              </div>
+                </motion.dd>
+              </motion.div>
             ))}
           </dl>
         </div>

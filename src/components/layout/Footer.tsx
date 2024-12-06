@@ -3,7 +3,6 @@ import { Logo } from '@/components/ui/logo';
 
 const navigation = {
   solutions: [
-    { name: 'Analytics Dashboard', href: '#' },
     { name: 'Student Portal', href: '#' },
     { name: 'Teacher Dashboard', href: '#' },
     { name: 'Parent Access', href: '#' },

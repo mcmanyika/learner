@@ -30,7 +30,7 @@ export function Header() {
               </Link>
             ))}
             <Button className="bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 transition-opacity" asChild>
-              <Link to="/pricing">
+              <Link to="/register">
                 Get Started
               </Link>
             </Button>
@@ -58,8 +58,10 @@ export function Header() {
               </Link>
             ))}
             <div className="pt-2">
-              <Button className="w-full bg-gradient-to-r from-primary to-blue-600">
+              <Button className="w-full bg-gradient-to-r from-primary to-blue-600" asChild>
+              <Link to="/register">
                 Get Started
+              </Link>
               </Button>
             </div>
           </div>
