@@ -39,7 +39,7 @@ export function Hero() {
             <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80"
+                  src="https://firebasestorage.googleapis.com/v0/b/glenview2-b3d45.appspot.com/o/general%2Fweb%2Fstudents%2FDSC_8739.jpg?alt=media&token=4c1ad891-71f2-4ba0-8bf0-5ab698df5e95"
                   alt="Student studying"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
@@ -49,7 +49,7 @@ export function Hero() {
             <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  src="https://firebasestorage.googleapis.com/v0/b/divaris-3e59f.appspot.com/o/images%2FDSC_5873.jpg?alt=media&token=4e9e2efa-bc11-4c7e-944e-dc63b5209f51"
                   alt="Teacher in classroom"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
@@ -57,7 +57,7 @@ export function Hero() {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  src="https://firebasestorage.googleapis.com/v0/b/glenview2-b3d45.appspot.com/o/general%2Fweb%2Fstudents%2FDSC_8761.jpg?alt=media&token=61d6ab1f-f3e5-4e58-be6b-57501e257f94"
                   alt="School building"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
