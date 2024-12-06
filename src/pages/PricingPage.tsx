@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const tiers = [
   {
     name: 'Basic',
-    price: 29,
+    price: 39,
     description: 'Perfect for small schools getting started',
     features: [
       'Up to 500 students',
