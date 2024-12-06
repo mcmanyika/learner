@@ -28,7 +28,7 @@ export function Hero() {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <Button size="lg" className="bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 transition-opacity gap-2" asChild>
-                <Link to="/register">
+                <Link to="/pricing">
                   Get Started
                   <ArrowRight className="h-4 w-4" />
                 </Link>

@@ -29,8 +29,10 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 transition-opacity">
-              Get Started
+            <Button className="bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 transition-opacity" asChild>
+              <Link to="/pricing">
+                Get Started
+              </Link>
             </Button>
           </div>
           <div className="md:hidden">
