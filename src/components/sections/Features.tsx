@@ -34,13 +34,6 @@ const features = [
     hoverColor: 'group-hover:bg-purple-600',
   },
   {
-    name: 'Communication Portal',
-    description: 'Seamless communication between teachers, students, and parents through an integrated platform.',
-    icon: MessageSquare,
-    bgColor: 'bg-pink-500',
-    hoverColor: 'group-hover:bg-pink-600',
-  },
-  {
     name: 'Fee Management',
     description: 'Streamlined fee collection, tracking, and automated payment reminders.',
     icon: CreditCard,
@@ -53,13 +46,6 @@ const features = [
     icon: Users,
     bgColor: 'bg-teal-500',
     hoverColor: 'group-hover:bg-teal-600',
-  },
-  {
-    name: 'Library System',
-    description: 'Digital library management with book tracking and lending system.',
-    icon: BookOpen,
-    bgColor: 'bg-red-500',
-    hoverColor: 'group-hover:bg-red-600',
   },
   {
     name: 'Notifications',
@@ -131,7 +117,7 @@ export function Features() {
           animate="visible"
           className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none"
         >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <motion.div 
                 key={feature.name}
