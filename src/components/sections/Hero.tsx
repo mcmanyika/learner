@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Sparkles, ArrowRight, Play } from 'lucide-react';
+import { Sparkles, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Hero() {
