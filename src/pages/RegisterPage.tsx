@@ -1,7 +1,16 @@
-import { useState, FormEvent } from 'react';
-import toast from 'react-hot-toast';
+'use client';
 
-export function Register() {
+import { useState, FormEvent, ChangeEvent } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { database } from '../../utils/firebaseConfig';
+import { ref, push } from 'firebase/database';
+
+if (!database) {
+  console.error('Firebase database not initialized properly');
+}
+
+const RegisterPage = () => {
   const [formData, setFormData] = useState({
     schoolName: '',
     email: '',
@@ -9,19 +18,41 @@ export function Register() {
     address: '',
     contactPerson: '',
     numberOfStudents: '',
+    timestamp: new Date().toISOString(),
+    status: 'pending'
   });
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     try {
-      // TODO: Add API call to register school
-      console.log('Form submitted:', formData);
+      if (!database) {
+        throw new Error('Firebase database not initialized');
+      }
+
+      console.log('Starting Firebase submission');
+      const schoolsRef = ref(database, 'schools');
       
-      // Show success toast
-      toast.success('Registration submitted successfully! We will contact you soon.');
+      const submissionData = {
+        ...formData,
+        timestamp: new Date().toISOString(),
+      };
+      console.log('Submission data prepared:', submissionData);
+
+      await push(schoolsRef, submissionData);
+      console.log('Data successfully pushed to Firebase');
       
-      // Optional: Clear form
+      toast.success('Registration submitted successfully! We will contact you soon.', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      
       setFormData({
         schoolName: '',
         email: '',
@@ -29,15 +60,25 @@ export function Register() {
         address: '',
         contactPerson: '',
         numberOfStudents: '',
+        timestamp: '',
+        status: 'pending'
       });
     } catch (error) {
-      // Show error toast
-      toast.error('Failed to submit registration. Please try again.');
-      console.error('Registration error:', error);
+      console.error('Detailed Firebase error:', error);
+      toast.error('Failed to submit registration. Please try again.', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -154,6 +195,20 @@ export function Register() {
           Register School
         </button>
       </form>
+
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }
+export default RegisterPage;
