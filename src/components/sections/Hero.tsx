@@ -45,7 +45,7 @@ export function Hero() {
             >
               Empower your institution with our comprehensive school management system. 
               Streamline operations, enhance learning experiences, and drive student success 
-              with Smart Learner's cutting-edge platform.
+              with Smart Learner's cutting-edge system.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
