@@ -3,11 +3,9 @@ import { useEffect } from 'react';
 import { 
   GraduationCap, 
   LineChart, 
-  Calendar, 
-  MessageSquare, 
+  Calendar,  
   CreditCard, 
   Users,
-  BookOpen,
   Bell
 } from 'lucide-react';
 
