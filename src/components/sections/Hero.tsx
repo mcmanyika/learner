@@ -15,7 +15,7 @@ export function Hero() {
             <div className="mb-8 flex">
               <div className="relative flex items-center gap-x-2 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <Sparkles className="h-4 w-4 text-primary animate-pulse" />
-                Revolutionizing Education Management
+                Revolutionizing Education Management 
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-primary to-blue-600">
