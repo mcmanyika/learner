@@ -9,7 +9,6 @@ const navigation = {
     { name: 'Parent Access', href: '#' },
   ],
   support: [
-    { name: 'Knowledge Base', href: '#' },
     { name: 'Live Chat', href: '#' },
   ],
   company: [
@@ -20,7 +19,6 @@ const navigation = {
   legal: [
     { name: 'Privacy', href: '#' },
     { name: 'Terms', href: '#' },
-    { name: 'Security', href: '#' },
   ],
   social: [
     {
