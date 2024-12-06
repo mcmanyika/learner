@@ -13,7 +13,6 @@ const navigation = {
   company: [
     { name: 'About Us', href: '#' },
     { name: 'School Finder', href: 'https://smartlearner.vercel.app/' },
-    { name: 'Partners', href: '#' },
   ],
   legal: [
     { name: 'Privacy', href: '#' },
