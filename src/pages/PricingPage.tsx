@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const tiers = [
   {
@@ -104,8 +105,11 @@ export function PricingPage() {
                     ? 'bg-primary hover:bg-primary/90'
                     : 'bg-white text-primary hover:bg-gray-50 ring-1 ring-inset ring-primary/20'
                 }`}
+                asChild
               >
-                Get started today
+                <Link to="/register">
+                  Get started today
+                </Link>
               </Button>
             </Card>
           ))}

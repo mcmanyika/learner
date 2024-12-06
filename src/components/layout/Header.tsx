@@ -1,16 +1,46 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const navigation = [
-    { name: 'Features', href: '/#features' },
-    { name: 'Pricing', href: '/pricing' },
+    { 
+      name: 'Features', 
+      href: '#features',
+      isScroll: true 
+    },
+    { 
+      name: 'Pricing', 
+      href: '/pricing',
+      isScroll: false 
+    },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: typeof navigation[0]) => {
+    if (item.isScroll) {
+      e.preventDefault();
+      if (location.pathname === '/') {
+        // If on home page, just scroll
+        scrollToSection(item.href.substring(1));
+      } else {
+        // If on another page, navigate to home page with hash
+        window.location.href = '/' + item.href;
+      }
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="fixed w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
@@ -23,7 +53,8 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                to={location.pathname === '/' ? item.href : '/' + item.href}
+                onClick={(e) => handleNavClick(e, item)}
                 className="text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
               >
                 {item.name}
@@ -50,18 +81,18 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                to={location.pathname === '/' ? item.href : '/' + item.href}
                 className="block py-2 text-sm font-medium text-gray-700 hover:text-primary"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, item)}
               >
                 {item.name}
               </Link>
             ))}
             <div className="pt-2">
               <Button className="w-full bg-gradient-to-r from-primary to-blue-600" asChild>
-              <Link to="/register">
-                Get Started
-              </Link>
+                <Link to="/register">
+                  Get Started
+                </Link>
               </Button>
             </div>
           </div>
