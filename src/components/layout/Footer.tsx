@@ -11,7 +11,7 @@ const navigation = {
     { name: 'Live Chat', href: '#' },
   ],
   company: [
-    { name: 'About Us', href: '/about' },
+    { name: 'About Us', href: '/about-us' },
     { name: 'School Finder', href: 'https://smartlearner.vercel.app/' },
   ],
   legal: [
