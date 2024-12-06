@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
 const benefits = [
-  "20+ years of experience in online development technology",
+  "20+ years of experience in online development",
   "24/7 dedicated support team",
   "Regular updates and feature improvements",
   "Customizable solutions for your needs",
