@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Logo } from '@/components/ui/logo';
-
+import { Link } from 'react-router-dom';
 const navigation = {
   solutions: [
     { name: 'Student Portal', href: '#' },
@@ -97,9 +97,9 @@ export function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-primary">
+                      <Link to={item.href} className="text-sm leading-6 text-gray-600 hover:text-primary">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
