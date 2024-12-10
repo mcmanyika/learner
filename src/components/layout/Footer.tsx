@@ -12,7 +12,7 @@ const navigation = {
   ],
   company: [
     { name: 'About Us', href: '/about-us' },
-    { name: 'School Finder', href: 'https://schoolfinder.co.zw' },
+    { name: 'School Finder', href: 'https://www.schoolfinder.co.zw' },
   ],
   legal: [
     { name: 'Privacy', href: '#' },
